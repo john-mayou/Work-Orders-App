@@ -26,6 +26,7 @@ function GridColumnList({ work_orders, timeSlots }) {
   return (
     <>
       {work_orders.map((order, index) => {
+        // First: calculate if the last job or current job are overlapping each other
         const twoJobsAgoEndTime =
           index !== 0 &&
           index !== 1 &&
@@ -50,6 +51,7 @@ function GridColumnList({ work_orders, timeSlots }) {
           index !== 1 &&
           twoJobsAgoEndTime.isAfter(oneJobAgoEndTime);
 
+        // Second: calculate time between orders
         let timeBetweenOrders;
 
         if (index === 0) {
