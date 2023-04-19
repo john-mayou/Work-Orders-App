@@ -1,0 +1,34 @@
+.work-order-grid {
+  display: flex;
+  gap: 1rem;
+
+  & > * {
+    flex: 0 0 200px;
+  }
+}
+
+.timeslots {
+  display: flex;
+  flex-direction: column;
+
+  &__time-box {
+    height: 50px;
+    text-align: right;
+  }
+
+  &__time-text {
+    border-top: 1px solid black;
+  }
+}
+
+.technician-name-box {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+}
+
+/* * {
+  border: 1px solid black;
+} */
